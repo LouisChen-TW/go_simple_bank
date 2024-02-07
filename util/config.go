@@ -6,7 +6,7 @@ import "github.com/spf13/viper"
 // The values are ready by viper from a config file or environment variables
 type Config struct {
 	DBDriver      string `mapstructure:"DB_DRIVER" envconfig:"DB_DRIVER" default:"postgres"`
-	DBSource      string `mapstructure:"DB_SOURCE" envconfig:"DB_SOURCE" default`
+	DBSource      string `mapstructure:"DB_SOURCE" envconfig:"DB_SOURCE" default:""`
 	ServerAddress string `mapstructure:"SERVER_ADDRESS" envconfig:"SERVER_ADDRESS" default:":8080"`
 }
 
