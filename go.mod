@@ -1,6 +1,6 @@
 module github.com/LouisChen-TW/simple_bank
 
-go 1.21.6
+go 1.22.0
 
 require (
 	github.com/aead/chacha20poly1305 v0.0.0-20201124145622-1a5aba2a8b29
