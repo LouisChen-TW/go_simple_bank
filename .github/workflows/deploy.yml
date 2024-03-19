@@ -36,3 +36,9 @@ jobs:
       run: |
         docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+
+    - name: Deploy image to Amazon EKS
+      run: |
+        kubectl apply -f eks/aws-auth.yaml
+        kubectl apply -f eks/deployment.yaml
+        kubectl apply -f eks/service.yaml
