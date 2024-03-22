@@ -11,7 +11,8 @@ import (
 type Config struct {
 	DBDriver             string        `mapstructure:"DB_DRIVER" envconfig:"DB_DRIVER" default:"postgres"`
 	DBSource             string        `mapstructure:"DB_SOURCE" envconfig:"DB_SOURCE" default:""`
-	ServerAddress        string        `mapstructure:"SERVER_ADDRESS" envconfig:"SERVER_ADDRESS" default:":8080"`
+	HTTPServerAddress    string        `mapstructure:"HTTP_SERVER_ADDRESS" envconfig:"HTTP_SERVER_ADDRESS" default:":8080"`
+	GRPCServerAddress    string        `mapstructure:"GRPC_SERVER_ADDRESS" envconfig:"GRPC_SERVER_ADDRESS" default:":9090"`
 	TokenSymmetricKey    string        `mapstructure:"TOKEN_SYMMETRIC_KEY" envconfig:"TOKEN_SYMMETRIC_KEY"`
 	AccessTokenDuration  time.Duration `mapstructure:"ACCESS_TOKEN_DURATION" envconfig:"ACCESS_TOKEN_DURATION"`
 	RefreshTokenDuration time.Duration `mapstructure:"REFRESH_TOKEN_DURATION" envconfig:"REFRESH_TOKEN_DURATION"`
