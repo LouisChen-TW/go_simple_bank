@@ -49,6 +49,6 @@ proto:
     proto/*.proto
 
 evans:
-	evans --host localhost --port 9090 -r repl
+	evans --host localhost --port 9090 --package pb --service SimpleBank -r repl
 
 .PHONY: postgres createdb dropdb migrateup migratedown sqlc test server db_docs db_schema proto evans
